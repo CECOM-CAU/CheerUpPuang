@@ -35,10 +35,10 @@ bool SendAck(){
 }
 
 void SendRGB(){
-
 }
 
 void SendRainbow(){
+  radio.write(&Protocol(RAINBOW, ID, ALL), 7);
 }
 
 byte[] Protocol(byte function, byte trans, byte rec, byte value[]){
